@@ -22,37 +22,37 @@ while simulation <= num_simulations:
         {'name': 'person 10', 'probability': .90}
     ]
 	
-	# iterate through different rounds until there is only a single contestant left
+    # iterate through different rounds until there is only a single contestant left
     round_num = 1
 
     while len(contestants) > 1:
-		# create empty list to store contestants as they answer wrong
+	# create empty list to store contestants as they answer wrong
         failed_contestants = []
-		# iterate through each contestant in above list
+	# iterate through each contestant in above list
         for contestant in contestants:
-			# get probability value from the contestant's dictionary
+	    # get probability value from the contestant's dictionary
             succeed_probability = contestant['probability']
-			# generate either 0 (wrong answer) or 1 (right answer) based on the probability of success. 
-			# np.random.choice params are : 2 (list with 2 elements, 0 and 1), 1 (number of tries to generate), and p[probability of element 0, probability of element 1])
+	    # generate either 0 (wrong answer) or 1 (right answer) based on the probability of success. 
+	    # np.random.choice params are : 2 (list with 2 elements, 0 and 1), 1 (number of tries to generate), and p[probability of element 0, probability of element 1])
             response = np.random.choice(2, 1, p=[1 - succeed_probability, succeed_probability])[0]
-			# if the contestant answers incorrectly, add them to the failed_contestants list
+	    # if the contestant answers incorrectly, add them to the failed_contestants list
             if response == 0:
                 failed_contestants.append(contestant)
-		# in the situation where we generated 0 for every one of the remaining contestants, the last one is the only remaining individual by default, so the person who answers last wins by default because everyone else was eliminated already
+	# in the situation where we generated 0 for every one of the remaining contestants, the last one is the only remaining individual by default, so the person who answers last wins by default because everyone else was eliminated already
         if len(failed_contestants) == len(contestants):
             # remove the contestant from the list of failed contestants who went last (i.e. the others failed before them and they won by being the last inidividual standing)
             failed_contestants.remove(failed_contestants[len(failed_contestants) - 1])
-		# remove anyone who answered wrong from the contestants list, so the subsequent loop only contains individuals who answered correctly in the prior round
+	# remove anyone who answered wrong from the contestants list, so the subsequent loop only contains individuals who answered correctly in the prior round
         for failed_contestant in failed_contestants:
             contestants.remove(failed_contestant)
-		# increment round counter variable
+	# increment round counter variable
         round_num = round_num + 1
-	# append winning contestant's name to the results list, which contains the winner from an individual simulation.
+    # append winning contestant's name to the results list, which contains the winner from an individual simulation.
     results.append(contestants[0]['name'])
-	# log every 1000 simulations to the console to track progress
+    # log every 1000 simulations to the console to track progress
     if simulation % 1000 == 0:
         print('simulation {0} completed'.format(simulation))
-	# increment simulation counter variable, then loop
+    # increment simulation counter variable, then loop
     simulation = simulation + 1
 
 # store a dictionary of the number of times each contestant won. 
