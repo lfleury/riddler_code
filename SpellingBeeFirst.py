@@ -59,28 +59,20 @@ while simulation <= num_simulations:
 results = Counter(results)
 
 print(results)
-# script ran for quite some time so I stopped it after 825000 or so
-# Counter({'person 1': 428573,
-#         'person 10': 3808,
-#         'person 2': 178288,
-#         'person 3': 89987,
-#         'person 4': 50690,
-#         'person 5': 29959,
-#         'person 6': 18419,
-#         'person 7': 12071,
-#         'person 8': 8064,
-#         'person 9': 5349})
+# Counter({'person 1': 51970, 'person 2': 21667, 'person 3': 11037, 'person 4': 6025, 'person 5': 3503, 'person 6': 2249, 'person 7': 1437, 'person 8': 950, 'person 9': 668, 'person 10': 494})
 
-
-#  contestant	wins	probability
-#  1			428573	51.94%
-#  2			178288	21.61%
-#  3			89987	10.90%
-#  4			50690	6.14%
-#  5			29959	3.63%
-#  6			18419	2.23%
-#  7			12071	1.46%
-#  8			8064	0.98%
-#  9			5349	0.65%
-#  10			3808	0.46%
-
+print('contestant    wins    probability')
+for key, value in results.items():
+    print(key, value, value/num_simulations)
+	
+# contestant    wins    probability
+# person 1 		51970 	0.5197
+# person 2 		21667 	0.21667
+# person 3 		11037 	0.11037
+# person 4 		6025 	0.06025
+# person 5 		3503 	0.03503
+# person 6 		2249 	0.02249
+# person 7 		1437 	0.01437
+# person 8 		950 	0.0095
+# person 9 		668 	0.00668
+# person 10 	494 	0.00494
