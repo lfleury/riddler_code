@@ -66,13 +66,13 @@ for key, value in results.items():
     print(key, value, value/num_simulations)
 	
 # contestant    wins    probability
-# person 1 		51970 	0.5197
-# person 2 		21667 	0.21667
-# person 3 		11037 	0.11037
-# person 4 		6025 	0.06025
-# person 5 		3503 	0.03503
-# person 6 		2249 	0.02249
-# person 7 		1437 	0.01437
-# person 8 		950 	0.0095
-# person 9 		668 	0.00668
+# person 1 	51970 	0.5197
+# person 2 	21667 	0.21667
+# person 3 	11037 	0.11037
+# person 4 	6025 	0.06025
+# person 5 	3503 	0.03503
+# person 6 	2249 	0.02249
+# person 7 	1437 	0.01437
+# person 8 	950 	0.0095
+# person 9 	668 	0.00668
 # person 10 	494 	0.00494
