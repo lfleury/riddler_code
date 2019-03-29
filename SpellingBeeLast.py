@@ -67,14 +67,14 @@ for key, value in results.items():
     print(key, value, value/num_simulations)
 	
 # contestant    wins    probability
-# person 1 		52426 	0.52426
-# person 2 		21571 	0.21571
-# person 3 		10893 	0.10893
-# person 4 		5978 	0.05978
-# person 5 		3639 	0.03639
-# person 6 		2154 	0.02154
-# person 7 		1418 	0.01418
-# person 8 		940 	0.0094
-# person 9 		587 	0.00587
+# person 1 	52426 	0.52426
+# person 2 	21571 	0.21571
+# person 3 	10893 	0.10893
+# person 4 	5978 	0.05978
+# person 5 	3639 	0.03639
+# person 6 	2154 	0.02154
+# person 7 	1418 	0.01418
+# person 8 	940 	0.0094
+# person 9 	587 	0.00587
 # person 10 	394 	0.00394
 
